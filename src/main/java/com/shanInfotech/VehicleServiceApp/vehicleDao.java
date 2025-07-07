@@ -14,8 +14,6 @@ public class vehicleDao implements Ivehicles{
 	private ResultSet rs=null;
 	Scanner sc =new Scanner(System.in);
 
-	
-	@Override
 	public void addvehicles(vehicles v) throws Exception {
 		con=DBConnect.dbConnect();
 		con.setAutoCommit(false);
@@ -33,9 +31,9 @@ public class vehicleDao implements Ivehicles{
 		
 	}
 
-	@Override
+
 	public void getvehicles() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

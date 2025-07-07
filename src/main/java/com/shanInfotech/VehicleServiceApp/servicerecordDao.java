@@ -10,11 +10,7 @@ public class servicerecordDao implements Iservicerecord {
 	private Connection con=null;
 	private PreparedStatement ps=null;
 	private ResultSet rs=null;
-	
-	
 
-	
-	@Override
 	public void addservicerecord(servicerecord r) throws  Exception  {
 		con=DBConnect.dbConnect();
 		con.setAutoCommit(false);
@@ -32,7 +28,6 @@ public class servicerecordDao implements Iservicerecord {
 		
 	}
 
-	@Override
 	public void getservicerecord() {
 		// TODO Auto-generated method stub
 		
