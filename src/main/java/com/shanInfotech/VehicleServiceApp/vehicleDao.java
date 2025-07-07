@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -32,7 +34,19 @@ public class vehicleDao implements Ivehicles{
 	}
 
 
-	public void getvehicles() {
+	public void getvehicles() throws Exception {
+		List<vehicles> list=new ArrayList<vehicles>();
+		Connection con=DBConnect.dbConnect();
+		PreparedStatement ps= con.prepareStatement("Select * from vehicles");
+		rs=ps.executeQuery();
+		while(rs.next());{
+		list.add(new vehicles(
+				rs.getInt(1),
+				rs.getString(2),
+				rs.getString(3),
+				rs.getString(4)));
+	}
+		return;
 		
 		
 	}
