@@ -60,7 +60,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shanInfotech.VehicleServiceApp</mainClass>
+                            <mainClass>com.shanInfotech.VehicleServiceApp.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
