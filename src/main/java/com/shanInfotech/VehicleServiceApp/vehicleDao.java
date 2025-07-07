@@ -34,7 +34,7 @@ public class vehicleDao implements Ivehicles{
 	}
 
 
-	public void getvehicles() throws Exception {
+	public List<vehicles> getvehicles() throws Exception {
 		List<vehicles> list=new ArrayList<vehicles>();
 		Connection con=DBConnect.dbConnect();
 		PreparedStatement ps= con.prepareStatement("Select * from vehicles");
@@ -46,9 +46,10 @@ public class vehicleDao implements Ivehicles{
 				rs.getString(3),
 				rs.getString(4)));
 	}
-		return;
 		
+		return list;	
 		
 	}
+	
 
 }
